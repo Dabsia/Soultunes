@@ -1,0 +1,47 @@
+.brands{
+    width: 75%;
+    max-width: 1240px;
+    margin: 2rem auto 4rem;
+}
+
+.brands__images{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.trustedBrands{
+    font-family: 'GT Walsheim Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 73px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.brandListContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.brandList{
+    margin: auto;
+}
+
+.brandText{
+    font-family: 'GT Walsheim Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,33 @@
+.AboutDesc{
+    width: 90%;
+    max-width: 1240px;
+    margin: auto;
+}
+
+.AboutDesc__header{
+    font-family: 'GT Walsheim Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.3rem;
+    color: #F45B49;
+}
+.AboutDesc__text{
+    font-family: 'GT Walsheim Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 26px;
+
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.aboutUsBox{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+
+.aboutUsBox-Right{
+    width: 50%;
+}

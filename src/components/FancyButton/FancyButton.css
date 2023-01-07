@@ -1,0 +1,19 @@
+.fancyBtnContainer{
+    position: relative;
+}
+
+.fancyButton{
+    outline: none;
+    border: none;
+    position: absolute;
+    top: -5px;
+    left: 4px;
+    cursor: pointer;
+    font-family: 'GT Walsheim Pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 16px;
+    text-align: center;
+    color: #191919;
+}
