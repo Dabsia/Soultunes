@@ -7,16 +7,17 @@ import QualitySoundtrack from '../../components/QualitySoundtrack/QualitySoundtr
 
 import './Home.css'
 
-const Home = () => {
+const Home: React.FC = (): JSX.Element => {
   return (
       <div>
+      
           <div className='homeContainer'>    
             <Header />
             <HeroSection />
           </div>
           <Brands />
           <QualitySoundtrack />
-          <Footer />
+      <Footer />
     </div>
   )
 }

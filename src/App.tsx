@@ -5,6 +5,7 @@ import {Route, Routes} from 'react-router-dom'
 import Soundtracks from './Pages/Soundtracks/Soundtracks';
 import Requests from './Pages/Requests/Requests';
 import About from './Pages/About/About';
+import Overlay from './components/Overlay/Overlay';
 
 
 const App: React.FC = () => {
@@ -12,6 +13,7 @@ const App: React.FC = () => {
   
   return (
     <div className="App">
+      <Overlay />
       <Routes >
         <Route path='/' element={<Home />} />
         <Route path='/soundtracks' element={<Soundtracks />} />

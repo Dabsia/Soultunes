@@ -26,7 +26,7 @@ ul{
 }
 
 .notActiveLink {
-    font-family: 'GT Walsheim Pro ' ,sans-serif;
+    font-family: 'Poppins ' ,sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1.2rem;
@@ -40,7 +40,7 @@ ul{
 }
 
 .activeLink{
-    font-family: 'GT Walsheim Pro' , sans-serif;
+    font-family: 'Poppins' , sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
