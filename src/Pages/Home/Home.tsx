@@ -15,7 +15,8 @@ const Home: React.FC = (): JSX.Element => {
             <Header />
             <HeroSection />
           </div>
-          <Brands />
+      <Brands />
+      
           <QualitySoundtrack />
       <Footer />
     </div>

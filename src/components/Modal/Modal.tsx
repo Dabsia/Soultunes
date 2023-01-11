@@ -1,11 +1,21 @@
 import React from 'react'
+import { closeModal } from '../../Redux/Actions'
 import FancyButton from '../FancyButton/FancyButton'
 import './Modal.css'
+import { useAppDispatch } from '../../Redux/Store'
 
 const Modal:React.FC = (): JSX.Element => {
+
+    const dispatch = useAppDispatch()
+
+    const closeTheModal = () => {
+        dispatch(closeModal())
+        
+    }
+
   return (
     <div className='modal'>
-        <div className='cancelBox'>
+        <div onClick={closeTheModal} className='cancelBox'>
             <i className="ri-close-line"></i>
         </div>
         <h1 className='modalHeader'>Soundtrack Request form</h1>

@@ -8,13 +8,14 @@ export interface buttonTypes{
   width: string;
   height: string;
   textColor: string;
-  borderColor: string
+  borderColor: string;
+  // redirectToRequest(): React.MouseEventHandler<HTMLButtonElement> | undefined
 }
 
-const FancyButton:React.FC<buttonTypes> = ({text, color, height, textColor, borderColor, width}):JSX.Element => {
+const FancyButton:React.FC<buttonTypes> = ({text, color, height, textColor ,borderColor, width}):JSX.Element => {
   return (
     <div style={{width: width, height :height, border: ` 1px solid ${borderColor}`}} className='fancyBtnContainer'>
-      <button style={{backgroundColor: color, color: textColor, width: width, height :height}} className='fancyButton'>{text}</button>
+      <button  style={{backgroundColor: color, color: textColor, width: width, height :height}} className='fancyButton'>{text}</button>
     </div>
   )
 }
