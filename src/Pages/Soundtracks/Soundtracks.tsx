@@ -5,16 +5,25 @@ import SearchBox from '../../components/SearchBox/SearchBox'
 import QualitySoundtrack from '../../components/QualitySoundtrack/QualitySoundtrack'
 import SoundtrackHeroSection from '../../components/SoundtrackHeroSection/SoundtrackHeroSection'
 import AllMusic from '../../components/AllMusic/AllMusic'
+import { useAppSelector } from '../../Redux/Store'
+import { State } from '../../Redux/Store'
+import MusicSection from '../../components/MusicSection/MusicSection'
 
 const Soundtracks = () => {
+
+  const showMusicComp = useAppSelector((state:State)=> state.data.showMusicComp)
+
   return (
-    <div>
+    <div>{showMusicComp ? <MusicSection /> : 
+      <>
         <div className='homeContainer'>    
             <Header />
             <SoundtrackHeroSection />
-      </div>
-      <SearchBox />
-      <AllMusic />
+        </div>
+        <SearchBox />
+        <AllMusic />
+      </>
+      }
       <QualitySoundtrack />
       <Footer />
     </div>

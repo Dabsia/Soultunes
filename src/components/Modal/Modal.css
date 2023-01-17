@@ -1,7 +1,7 @@
 .modal{
     background-color: #fff;
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: fit-content;
     padding: 1rem 2rem;
     position: relative;
 }
@@ -22,12 +22,13 @@
 }
 
 .modalHeader{
-font-family: Poppins, sans-serif;
+    font-family: Poppins, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 2rem;
     line-height: 41px;
     color: #000;
+    margin: .8rem 0;
 }
 
 .innerInputBox{
@@ -82,4 +83,26 @@ textarea{
 
 .formBtnBox{
     margin-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    label{
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .inputFieldsBox {
+        flex-direction: column;
+        margin-top: .5rem;
+    }
+        .innerInputBox{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .modal{
+        width: 80%;
+        margin: auto 0;
+        
+    }
 }

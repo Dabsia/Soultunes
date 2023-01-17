@@ -28,11 +28,11 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    
 }
 
 .brandList{
     margin: auto;
+    width: 100%;
 }
 
 .brandText{
@@ -44,4 +44,11 @@
     text-align: center;
 
     color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 800px){
+    .brandText{
+        font-size: 1.25rem;
+        
+    }
 }

@@ -1,5 +1,6 @@
-/* .App{
-  max-width: 1240px ;
+.App{
+  /* max-width: 1240px ;
   margin: auto;
-  margin-top: 2rem;
-} */
+  margin-top: 2rem; */
+  overflow-x: hidden
+}

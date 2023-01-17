@@ -99,3 +99,18 @@
     text-decoration: none;
     color: #000000;
 }
+
+@media screen and (max-width: 500px) {
+    .songName{
+        font-size: .9rem;
+    }
+    .songArtists{
+        font-size: .8rem;
+    }
+    .ImageCard{
+    margin-right: 1rem;
+    
+}
+
+
+}

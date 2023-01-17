@@ -11,7 +11,7 @@ const SearchBox:React.FC= ():JSX.Element => {
 
   const submitForm = (e: React.FormEvent) => {
       e.preventDefault()
-    setSearchTerm('')
+    // setSearchTerm('')
     dispatch(searchText(searchTerm))
   }
 

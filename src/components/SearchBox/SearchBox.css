@@ -1,6 +1,7 @@
 .searchBoxParent{
     background: #F8F7F8;
     width: 90%;
+    max-width: 1240px;
     margin: 2rem auto;
     display: flex;
     height: 4rem;
@@ -19,7 +20,6 @@
 .searchInput{
     width: 95%;
     height: 90%;
-    
     margin-left: 1rem;
     padding-left: .5rem;
     outline: none;
@@ -34,4 +34,29 @@
     font-size: 1rem;
     align-self: center;
     color: #cac4d0;
+}
+
+@media screen and (max-width: 900px){
+    .searchInput{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .searchInput {
+        margin-left: .5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .searchInput {
+        width: 87%;
+        margin-left: .5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .searchInput {
+        margin-left: 0;
+    }
 }

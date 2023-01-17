@@ -8,23 +8,27 @@ export interface FetchedMusicData{
 }
 
 
-export interface appActions {
-    type: string;
-    payload?: string | FetchedMusicData 
-}
+
 
 interface InitialStateType{
     isModalOpen: boolean;
     tracks: FetchedMusicData[];
     isLoading: boolean,
-    searchValue : string
+    searchValue: string,
+    showMusicComp : boolean
+}
+
+export interface appActions {
+    type: string;
+    payload?: string | FetchedMusicData[] | FetchedMusicData
 }
 
 const initialState = {
     isModalOpen: false,
     tracks: [],
     isLoading: false,
-    searchValue: ''
+    searchValue: '',
+    showMusicComp: false
 }
 
 
@@ -40,6 +44,14 @@ const reducer = (state: InitialStateType = initialState, action: appActions): In
             return {
                 ...state, isModalOpen: false
             }
+        case ActionTypes.SHOW_MUSIC_COMPONENT:
+            return {
+                ...state, showMusicComp: true
+            }
+        case ActionTypes.HIDE_MUSIC_COMPONENT:
+            return {
+                ...state, showMusicComp: false
+            }
         case ActionTypes.FETCH_ALL_SONGS_START: 
             return {
                 ...state, isLoading: true
@@ -48,7 +60,7 @@ const reducer = (state: InitialStateType = initialState, action: appActions): In
             return {
                 ...state,
                 isLoading: false,
-                tracks: action.payload as any
+                tracks: action.payload as FetchedMusicData[]
             }
         case ActionTypes.SEARCH_TEXT:
             return {

@@ -5,5 +5,28 @@
     margin: auto;
     grid-gap: 2rem;
     height: fit-content;
+    max-width: 1240px;
     margin-bottom: 2rem;
+}
+
+.loadingContainer{
+    display: flex;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 670px){
+    .musicCardList{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .musicCardList {
+        grid-gap: 1rem;
+    }
 }

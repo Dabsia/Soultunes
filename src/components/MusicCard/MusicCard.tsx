@@ -2,8 +2,17 @@ import React from 'react'
 import './MusicCard.css'
 import { FetchedMusicData } from '../../Redux/Reducer'
 
+import ReactAudioPlayer from 'react-audio-player';
+import useSound from 'use-sound'
+
+
 
 const MusicCard:React.FC<FetchedMusicData> = ({name, previewURL, artistName, id}) => {
+
+  // const [play] = useSound<string>(previewURL)
+//...
+
+
   return (
     <div className='musicCard'>
         <div className='ImageCard'>
@@ -16,8 +25,9 @@ const MusicCard:React.FC<FetchedMusicData> = ({name, previewURL, artistName, id}
                   <p className='noOfTimesPlayed'>Played 3.5k</p>
               </div>  
               <div className='songIcons'>
-                  <div className='playBox'>
-                    <i className="ri-play-circle-fill playIcon"></i>
+          <div className='playBox'>
+      
+                    <i  className="ri-play-circle-fill playIcon"></i>
                   </div>
                   <div className='downloadBox'>
                         <a className='download' href={previewURL}>
@@ -25,7 +35,12 @@ const MusicCard:React.FC<FetchedMusicData> = ({name, previewURL, artistName, id}
                         </a>
                   </div>
               </div>
-        </div>
+      </div>
+      {/* <ReactAudioPlayer
+        src={previewURL}
+  
+  controls
+/> */}
     </div>
   )
 }

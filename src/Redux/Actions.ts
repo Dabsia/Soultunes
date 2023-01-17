@@ -3,14 +3,6 @@ import { Dispatch } from "redux"
 import { appActions } from "./Reducer"
 import { FetchedMusicData } from "./Reducer"
 
-interface FetchMusicStartAction{
-    type: ActionTypes.FETCH_ALL_SONGS_START
-}
-
-interface FetchMusicSuccessAction{
-    type: ActionTypes.FETCH_ALL_SONGS_START
-}
-
 const openModalAction = () => ({
     type: ActionTypes.OPEN_FORM
 })
@@ -19,16 +11,27 @@ const closeModalAction = () => ({
     type: ActionTypes.CLOSE_FORM
 })
 
-export const openModal = () => (dispatch:Dispatch<appActions>) => {
-    dispatch({
-    type: ActionTypes.OPEN_FORM
+const showMusicComponentAction = () => ({
+    type: ActionTypes.SHOW_MUSIC_COMPONENT
 })
+
+const hideMusicComponentAction = () => ({
+    type: ActionTypes.HIDE_MUSIC_COMPONENT
+})
+
+export const openModal = () => (dispatch:Dispatch<appActions>) => {
+    dispatch(openModalAction())
 }
 
 export const closeModal = () => (dispatch:Dispatch<appActions>) => {
-    dispatch({
-        type: ActionTypes.CLOSE_FORM
-    })
+    dispatch(closeModalAction())
+}
+
+export const showMusicComponent = () => (dispatch: Dispatch<appActions>) => {
+    dispatch(showMusicComponentAction())
+}
+export const hideMusicComponent = () => (dispatch: Dispatch<appActions>) => {
+    dispatch(hideMusicComponentAction())
 }
 
 
@@ -50,10 +53,10 @@ export const searchText = (text: string) => (dispatch:Dispatch<appActions>)  => 
     )
 }
 
-// const fetchMusicFailed = (message: string) => ({
-//     type: ActionTypes.FETCH_ALL_SONGS_FAILED,
-//     payload: message
-// })
+const fetchMusicFailed = (message: string) => ({
+    type: ActionTypes.FETCH_ALL_SONGS_FAILED,
+    payload: message
+})
 
 export const fetchMusic = () => (dispatch: Dispatch<appActions>) => {
     dispatch(fetchMusicStart())
