@@ -3,7 +3,7 @@ import './AboutDesc.css'
 
 const AboutUs = require("../../Assets/AboutUs.png");
 
-const AboutDesc = () => {
+const AboutDesc: React.FC = () => {
   return (
       <div className='AboutDesc'>
           <div>
@@ -12,7 +12,7 @@ const AboutDesc = () => {
           </div>
           <div className='aboutUsBox'>
               <div>
-                  <img src = {AboutUs} alt = 'About us' />
+                  <img className='abtUsImage' src = {AboutUs} alt = 'About us' />
               </div>
               <div className='aboutUsBox-Right'>
                   <h1 className='AboutDesc__header' >Our Vision and mission</h1>

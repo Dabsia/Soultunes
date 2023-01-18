@@ -18,10 +18,11 @@
     font-weight: 700;
     font-size: 4rem;
     line-height: 73px;
-    text-align: center;
-
     color: #000000;
+    text-align: center;
 }
+
+
 
 .brandListContainer{
     display: flex;
@@ -41,9 +42,42 @@
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.6rem;
-    text-align: center;
-
     color: rgba(0, 0, 0, 0.5);
+}
+
+.brandTextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content
+}
+
+@media screen and (max-width: 1225px) {
+    .trustedBrands {
+        font-size: 3.5rem;
+        
+    }
+}
+
+@media screen and (max-width: 1105px) {
+    .trustedBrands {
+        font-size: 3rem;
+
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .sparkles{
+        width: 4rem;
+    }
+}
+
+@media screen and (max-width: 895px) {
+    .trustedBrands {
+        font-size: 2.5rem;
+
+    }
 }
 
 @media screen and (max-width: 800px){
@@ -51,4 +85,62 @@
         font-size: 1.25rem;
         
     }
+    .brandText{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin-bottom: 0;
+    }
+
+    .brands {
+        width: 90%;
+    }
+    .brands__images{
+        justify-content: space-between;
+        
+    }
 }
+
+@media screen and (max-width: 780px) {
+    .trustedBrands {
+        font-size: 2.2rem;
+
+    }
+    .brandText {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .trustedBrands {
+        font-size: 2rem;
+    }
+   
+}
+
+@media screen and (max-width: 544px) {
+    .trustedBrands {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .brandText {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .sparkles {
+        width: 3rem;
+    }
+
+    .trustedBrands {
+        width: 80%;
+        line-height: 2.4rem;
+    }
+}
+

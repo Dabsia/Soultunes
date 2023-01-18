@@ -17,7 +17,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 1.4rem;
-    line-height: 26px;
+    line-height: 2rem;
 
     color: rgba(0, 0, 0, 0.5);
 }
@@ -30,4 +30,35 @@
 
 .aboutUsBox-Right{
     width: 50%;
+}
+
+@media screen and (max-width:950px ){
+    .AboutDesc__header {
+        font-size: 3rem;
+        line-height: 4.3rem;
+    }
+    .AboutDesc__text{
+        font-size: 1.2rem;
+        line-height: 26px;
+    }
+    .aboutUsBox{
+        flex-direction: column;
+    }
+    .aboutUsBox-Right{
+        width: 100%;
+    }
+    .abtUsImage{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:700px) {
+
+    .AboutDesc__text {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+    .AboutDesc__header {
+        font-size: 2.7rem;
+    }
 }

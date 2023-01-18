@@ -9,14 +9,16 @@ const Brands = () => {
   return (
     <div className='brands'>
         <div className='brands__images'>
-              <img src={Face} alt='face' />
+              <img src={Face} alt='face' className='sparkles' />
               <h2 className='trustedBrands'>Trusted by top brands</h2>
-              <img src = {Star} alt = 'star' />
+              <img src = {Star} alt = 'star' className='sparkles' />
           </div>
           <div className='brandListContainer'>  
             <img className='brandList' src={brands} alt = 'brands' />
-          </div>
+      </div>
+      <div className = 'brandTextContainer'>
           <p className='brandText'>All over the world, top agencies, brands, campaigns find Soultunes essential for their work process. Soultunes helps businesses engage a new audience and increase brand recognition</p>
+      </div>
     </div>
   )
 }

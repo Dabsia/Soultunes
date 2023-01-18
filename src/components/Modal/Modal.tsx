@@ -13,13 +13,18 @@ const Modal:React.FC = (): JSX.Element => {
         
     }
 
+  const submitForm = (e: React.FormEvent) => {
+    e.preventDefault()
+    alert('Hellllo')
+  }
+
   return (
     <div className='modal'>
         <div onClick={closeTheModal} className='cancelBox'>
             <i className="ri-close-line"></i>
         </div>
         <h1 className='modalHeader'>Soundtrack Request form</h1>
-        <form>
+        <form onSubmit={submitForm}>
             <div className='inputFieldsBox'>
                   <div className='innerInputBox'>
                     <label htmlFor='genre'>Select Genre of soundtrack</label>

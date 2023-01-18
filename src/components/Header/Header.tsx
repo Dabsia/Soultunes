@@ -3,19 +3,13 @@ import "./Header.css";
 import { NavLink, useNavigate } from "react-router-dom";
 // import logo from "../../Assets/Logo.png"
 import FancyButton from "../FancyButton/FancyButton";
-import { useAppDispatch } from '../../Redux/Store'
-import { openModal } from '../../Redux/Actions'
+
 
 const logo = require("../../Assets/Logo.png");
 
 const Header: React.FC = (): JSX.Element => {
   
-  const dispatch = useAppDispatch()
-
-  const openTheModal = () => {
-        dispatch(openModal())
-        
-  }
+  
   
   const navigate = useNavigate()
 
@@ -55,7 +49,7 @@ const Header: React.FC = (): JSX.Element => {
             About
           </NavLink>
         </li>
-        <button onClick={openTheModal}>Open</button>
+        
       </ul>
       <FancyButton
         text="Make a request"

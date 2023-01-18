@@ -14,7 +14,7 @@ const AboutHeroSection: React.FC = (): JSX.Element => {
               </div>
         </div>
         <div className='rightContainer'>
-            <img src={Music} alt = 'hero' />
+            <img src={Music} alt = 'hero' className='illustrationImage' />
         </div>
     </div>
   )

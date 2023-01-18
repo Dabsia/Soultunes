@@ -16,7 +16,7 @@ const SoundtrackHeroSection: React.FC = (): JSX.Element => {
               </div>
         </div>
         <div className='rightContainer'>
-            <img src={Group} alt = 'hero' />
+            <img src={Group} alt = 'hero' className='illustrationImage' />
         </div>
     </div>
   )

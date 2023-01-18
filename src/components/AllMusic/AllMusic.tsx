@@ -16,6 +16,7 @@ const AllMusic: React.FC = () => {
     const searchValue = useSelector((state: State) => state.data.searchValue)
 
     const isLoading = useSelector((state: State) => state.data.isLoading)
+    // const errMsg = useSelector((state: State) => state.data.errMsg)
 
     const filteredTracks = tracks.filter(track => {
     return track.name.toLowerCase().includes(searchValue.toLowerCase())
@@ -27,6 +28,9 @@ const AllMusic: React.FC = () => {
     useEffect(() => {
         dispatch(fetchMusic())
     }, [dispatch])
+
+    
+    
 
 
     return (

@@ -16,7 +16,7 @@ const HeroSection: React.FC = (): JSX.Element => {
               </div>
         </div>
         <div className='rightContainer'>
-            <img src={heroImage} alt = 'hero' />
+            <img className='illustrationImage' src={heroImage} alt = 'hero' />
         </div>
     </div>
   )

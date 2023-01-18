@@ -15,7 +15,9 @@ interface InitialStateType{
     tracks: FetchedMusicData[];
     isLoading: boolean,
     searchValue: string,
-    showMusicComp : boolean
+    showMusicComp: boolean,
+    activeMusic: FetchedMusicData,
+    errMsg: string
 }
 
 export interface appActions {
@@ -28,7 +30,9 @@ const initialState = {
     tracks: [],
     isLoading: false,
     searchValue: '',
-    showMusicComp: false
+    showMusicComp: false,
+    errMsg: '',
+    activeMusic: {id: '', name: '', previewURL: '', artistName: ''}
 }
 
 
@@ -60,11 +64,20 @@ const reducer = (state: InitialStateType = initialState, action: appActions): In
             return {
                 ...state,
                 isLoading: false,
-                tracks: action.payload as FetchedMusicData[]
+                tracks: action.payload as FetchedMusicData[],
+                errMsg: ''
+            }
+        case ActionTypes.FETCH_ALL_SONGS_FAILED:
+            return {
+                ...state, activeMusic: {id: '', name: '', previewURL: '', artistName: ''}, errMsg: action.payload as string
             }
         case ActionTypes.SEARCH_TEXT:
             return {
                 ...state, searchValue: action.payload as string
+            }
+        case ActionTypes.GET_SINGLE_MUSIC:
+            return {
+                ...state, activeMusic: action.payload as FetchedMusicData
             }
         default:
             return state
