@@ -70,18 +70,23 @@ const fetchMusicFailed = (message: string) => ({
     payload: message
 })
 
-export const fetchMusic = () => (dispatch: Dispatch<appActions>) => {
+export const fetchMusic = () => async(dispatch: Dispatch<appActions>) => {
     try {
         
         dispatch(fetchMusicStart())
-        fetch('https://api.napster.com/v2.1/tracks/top?apikey=ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm')
-            .then(res => res.json())
-            .then(data => {
-                if (!data) {                    
-                    dispatch(fetchMusicFailed('Please check your internet Connection'))   
-                }
+        const res = await fetch('https://api.napster.com/v2.1/tracks/top?apikey=ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm')
+
+        const data = await res.json()
+
+        dispatch(fetchMusicSuccess(data.tracks))
+
+            // .then(res => res.json())
+            // .then(data => {
+            //     if (!data) {                    
+            //         dispatch(fetchMusicFailed('Please check your internet Connection'))   
+            //     }
                 dispatch(fetchMusicSuccess(data.tracks))
-            })
+            // })
     }
     catch(err) {
         console.log(err)

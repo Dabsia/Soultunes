@@ -1,9 +1,10 @@
 .modal{
     background-color: #fff;
     width: 70%;
-    height: fit-content;
+    height: 77vh;
     padding: 1rem 2rem;
     max-width: 1240px;
+    overflow-y: scroll;
     position: relative;
 }
 
@@ -106,4 +107,17 @@ textarea{
         margin: auto 0;
         
     }
+
+    
+}
+
+
+@media screen and (max-width: 360px) {
+    .modal {
+        width: 70%;
+        margin: auto 0;
+
+    }
+
+
 }

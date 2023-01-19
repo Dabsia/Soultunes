@@ -1,13 +1,21 @@
+.navParent{
+    width: 90%;
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: 6rem;
-    max-width: 1280px;
-    margin: auto;
-    /* padding-top: 2rem; */
+    width: 90%;
     position: sticky;
+    
+    margin: auto;
     top: 0;
     z-index: 2;
     background-color: #fffbf7;
@@ -31,11 +39,8 @@ ul{
         font-weight: 400;
         font-size: 1.2rem;
         line-height: 23px;
-        /* identical to box height */
-    
         text-align: center;
         text-decoration: none;
-    
         color: rgba(0, 0, 0, 0.5);
 }
 
@@ -45,9 +50,92 @@ ul{
         font-weight: 700;
         font-size: 20px;
         line-height: 1.2rem;
-        /* identical to box height */
-    
         text-align: center;
         text-decoration: none;
         color: #FB564C;
+}
+
+.responsiveNav{
+    display: none;
+}
+
+.menu{
+    font-size: 2rem;
+    color: #FB564C;
+    display: none;
+}
+
+
+
+@media screen and ( max-width: 1075px){
+    ul {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    ul {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .navParent{
+        flex-direction: column;
+    }
+    nav{
+        width: 90%;
+        margin: auto;
+        height: 4rem;
+    }
+    ul {
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .navButtonContainer{
+        display: none;
+    }
+    .responsiveNav{
+        flex-direction: column;
+        display: block;
+        padding: 2rem 5%;
+        background-color: #fff;
+        width: 90%;
+        /* animation: slideDown 3s;
+        position: relative; */
+        
+    }
+    .responsiveUl{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-top: 0;
+    }
+    
+    .responsiveUl li{
+        margin-bottom: 1rem;
+    }
+
+    .notActiveLink {
+        font-size: 1rem;
+    }
+
+    .activeLink{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    /* @keyframes slideDown{
+        from {
+            height: 0;
+            display: none;
+        }
+        to{
+            height: 13.8rem;
+            display: flex;
+        }
+    } */
 }
