@@ -32,8 +32,10 @@ const MusicSection:React.FC= () => {
   }
 
   return (
-    <div>
+      <div>
+          <div className='soundtracksMenu'>
           <Header />
+          </div>
           <p className='backButton' onClick={closeMusicComp}><i className="ri-arrow-left-s-line backArrow"></i>Back</p>
           <div className = 'musicSection'>
               <div className='musicBox'>

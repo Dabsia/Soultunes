@@ -22,8 +22,8 @@ const Header: React.FC = (): JSX.Element => {
 
   return (
     <>
-    <div className="navParent">
-      <nav style={{width: (showMusicComp)? '90%' : '100%' } }>
+    <div  className="navParent">
+      <nav>
         <img onClick={() => navigate('/')} className="logo" src={logo} alt="Logo" />
         <ul>
           <li>

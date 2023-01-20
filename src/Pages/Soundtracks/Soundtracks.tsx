@@ -9,21 +9,25 @@ import { useAppSelector } from '../../Redux/Store'
 import { State } from '../../Redux/Store'
 import MusicSection from '../../components/MusicSection/MusicSection'
 
-const Soundtracks = () => {
+const Soundtracks:React.FC = ():JSX.Element => {
 
   const showMusicComp = useAppSelector((state:State)=> state.data.showMusicComp)
 
   return (
-    <div>{showMusicComp ? <MusicSection /> : 
-      <>
-        <div className='homeContainer'>    
-            <Header />
-            <SoundtrackHeroSection />
-        </div>
-        <SearchBox />
-        <AllMusic />
-      </>
+    <div>
+      <div>
+        
+        {showMusicComp ? <MusicSection /> : 
+        <>
+            <div className='homeContainer'>  
+          <Header />    
+              <SoundtrackHeroSection />
+          </div>
+          <SearchBox />
+          <AllMusic />
+        </>
       }
+      </div>
       <QualitySoundtrack />
       <Footer />
     </div>
