@@ -10,10 +10,12 @@ import { TailSpin } from 'react-loading-icons'
 
 const AllMusic: React.FC = () => {
 
-
     const tracks = useSelector((state: State) => state.data.tracks)
 
     const searchValue = useSelector((state: State) => state.data.searchValue)
+    const errMsg = useSelector((state: State) => state.data.errMsg)
+
+    console.log(errMsg)
 
     const isLoading = useSelector((state: State) => state.data.isLoading)
     // const errMsg = useSelector((state: State) => state.data.errMsg)
@@ -30,15 +32,10 @@ const AllMusic: React.FC = () => {
     }, [dispatch])
 
     
+    let response = null
     
-
-
-    return (
-        <>
-            {isLoading ?<div className='loadingContainer'>
-                            <TailSpin stroke="#F45B49" />
-                    </div> :
-            <div className='musicCardList'>
+    if (tracks.length > 0) {
+        response =  <div className='musicCardList'>
                 {
                     filteredTracks.map((track:FetchedMusicData )=> {
                         return (
@@ -46,7 +43,18 @@ const AllMusic: React.FC = () => {
                         )
                     })
                 }
-            </div>}
+            </div>
+    }
+    else if (tracks.length === 0) {
+        response = <p className='errMsg'>{errMsg}</p>
+    }
+
+
+    return (
+        <>
+            {isLoading ?<div className='loadingContainer'>
+                            <TailSpin stroke="#F45B49" />
+                    </div> : response }
         </>
     )
 }

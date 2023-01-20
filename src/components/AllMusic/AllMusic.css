@@ -19,6 +19,13 @@
     margin-bottom: 2rem;
 }
 
+.errMsg{
+    color: red;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 670px){
     .musicCardList{
         grid-template-columns: repeat(1, 1fr);
@@ -28,5 +35,8 @@
 @media screen and (max-width: 500px) {
     .musicCardList {
         grid-gap: 1rem;
+    }
+    .errMsg{
+        font-size: .8rem;
     }
 }
